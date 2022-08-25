@@ -9,26 +9,102 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="page">
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__content">
-          <div class="header__city">
-            <p>Ваш город:</p>
-            <h3>Москва</h3>
-          </div>
-          <div class="header__logo">
-            <img src="./img/header-logo.svg" alt="Shacman logo">
-          </div>
-          <div class="header__call-btn button_primary">
-            <span>Заказать звонок</span>
+    <div class="fixed">
+      <header class="header">
+        <div class="wrapper">
+          <div class="header__content">
+            <div class="header__city">
+              <p>Ваш город:</p>
+              <h3>Москва</h3>
+            </div>
+            <div class="header__mobile">
+              8 (999) 643-64-31
+            </div>
+            <div class="header__logo">
+              <img src="./img/header-logo.svg" alt="Shacman logo">
+            </div>
+            <div class="header__contacts">
+
+            </div>
+            <button class="header__call-btn button button_primary">
+              <span>Заказать звонок</span>
+            </button>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <nav class="menu">
+        <div class="wrapper">
+          <div class="menu__content">
+            <button class="menu__catalog button button_primary">
+              <span>Каталог</span>
+            </button>
+            <div class="menu-items">
+              <a class="menu__item" href="#">О бренде</a>
+              <a class="menu__item" href="#">О компании</a>
+              <a class="menu__item" href="#">Партнеры</a>
+            </div>
+
+            <div class="menu__search">
+              <input class="search" type="text" placeholder="Поиск по сайту" >
+            </div>
+          </div>
+        </div>
+        
+      </nav>
+    </div>
+    
+
+    <main>
+      <section class="main">
+        <div class="wrapper">
+          <div class="main__content">
+              <h1>
+              Грузовая техника<br>SHACMAN<br>от официального дилера 
+            </h1>
+            <p>
+              Большой ассортимент наличия техники.<br>Эксклюзивные условия покупки в лизинг.<br>Доставка в любой город России.
+            </p>
+            <div class="main__buttons">
+              <button class=" button button_primary">Подобрать модель самосвала</button>
+              <button class="button button_secondary">Перейти в каталог</button>
+            </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__categories">
+          <div class="wrapper">
+            <h2>Каталог техники</h2>
+            <div class="categories">
+              <div class="categories__item category">
+                <img class="category__img" src="./img/mixers.png" alt="">
+                <p class="category__name">Миксеры</p>
+              </div>
+              <div class="categories__item category">
+                <img class="category__img" src="./img/dumps.png" alt="">
+                <p class="category__name">Самосвалы</p>
+              </div>
+              <div class="categories__item category">
+                <img class="category__img" src="./img/tractors.png" alt="">
+                <p class="category__name">Седельные тягачи</p>
+              </div>
+              <div class="categories__item category">
+                <img class="category__img" src="./img/chassis.png" alt="">
+                <p class="category__name">Шасси</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__products">
+
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>
