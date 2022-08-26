@@ -28,6 +28,7 @@
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 
 /* Header start */
@@ -199,13 +200,25 @@
 /* Catalog start */
 
 .catalog__categories {
+  padding-top: 61px;
   height: 423px;
   background: linear-gradient(90.03deg, #181818 0.03%, #272727 51.25%, #101010 99.98%);
+}
+
+.catalog__categories h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .categories {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  position: relative;
 }
 
 .categories__item {
@@ -216,10 +229,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+
+.category__active {
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  filter: blur(130px);
 }
 
 .category__img {
 
+}
+
+.categories__item:first-child .category__img {
+  margin-bottom: -10px;
 }
 
 .category__name {
@@ -227,10 +254,472 @@
   line-height: 26px;
   text-align: center;
   color: #D9D9D9;
+  margin-bottom: 35px;
 }
+
+.category__arrow {
+  position: absolute;
+  width: 54.17px;
+  height: 16.26px;
+  opacity: 0;
+  bottom: -16.26px;
+  left: calc(50% - 27px);
+}
+
+.category__arrow_active {
+  opacity: 1;
+}
+
+.catalog__products {
+  height: 400px;
+  background-color: black;
+  padding-top: 72px;
+}
+
+/* Slider start */
+.slider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.slider__content {
+  flex-grow: 2;
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+}
+/* Slider end */
 
 /* Catalog end */
 
+/* Cabines start */
+.cabines {
+  padding-top: 83px;
+  padding-bottom: 90px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabines h2 {
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 96px;
+}
+
+.cabines__items {
+  margin: 0 auto;
+  width: 1096px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cabine {
+  width: 330px;
+}
+
+.cabine__img {
+  width: 100%;
+  margin-bottom: 54px;
+}
+
+.cabine__title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 36px;
+}
+
+.cabine__title .button {
+  width: 116px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.cabine__description {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.cabine:nth-child(2) {
+  width: 385px;
+  margin-top: -27px;
+  margin-left: -3.5px;
+}
+
+.cabine:nth-child(2) .cabine__img {
+  margin-bottom: 33px;
+}
+
+.cabine:nth-child(2) .cabine__title {
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 27px;
+  align-items: start;
+}
+
+.cabine:nth-child(2) .button {
+  width: 137px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.cabine:nth-child(2) .cabine__description {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Cabines end */
+
+/* Callback start */
+
+.callback {
+  background: url('../img/callback-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+.callback__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.callback__left {
+  width: 400px;
+  margin-top: 61px;
+  margin-bottom: 72px;
+}
+
+.callback__left h3 {
+  font-size: 30px;
+  line-height: 39px;
+  margin-bottom: 10px;
+}
+
+.callback__email {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.callback__left span {
+  text-decoration: underline;
+}
+
+.callback__tel {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.callback__right {
+  margin-top: 116px;
+}
+
+.callback__form {
+  display: flex;
+  justify-content: end;
+}
+
+.form__input {
+  border-radius: 6px;
+  padding: 12px 17px 13px;
+  width: 384px;
+  font-size: 18px;
+  line-height: 23px;
+  color: black;
+  margin-right: 42px;
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+.form__input::placeholder {
+  color: #8F909A;
+}
+
+.form__checkbox {
+  display: flex;
+}
+
+.form__button {
+  width: 280.8px;
+  height: 48px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.checkbox-true {
+  display: none;
+}
+
+.checkbox-fake {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 2px;
+  padding-top: 5px;
+  padding-left: 4px;
+  margin-right: 12px;
+}
+
+.checkbox-check {
+  opacity: 0;
+}
+
+.checkbox-true:checked ~ .checkbox-fake .checkbox-check {
+  opacity: 1;
+}
+
+/* Callback end */
+
+/* About start */
+
+.about {
+  background: url('../img/about-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.about__content {
+  padding: 142px 0;
+  color: white;
+}
+
+.about__content h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  margin-bottom: 37px;
+}
+
+.about__content p {
+  width: 48%;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 37px;
+}
+
+.about__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* About end */
+
+/* Advantages start */
+
+.advantages {
+  background-color: #f5f5f5;
+  padding-top: 82px;
+  padding-bottom: 92px;
+}
+
+.advantages h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.advantages__content {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.advantage {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.advantage:nth-child(4),
+.advantage:nth-child(5),
+.advantage:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.advantage__img {
+  width: 100%;
+  height: 150px;
+  background: no-repeat center center;
+  margin-bottom: 18px;
+}
+
+.advantage__img_1 {
+  background-image: url('../img/in-stock.svg');
+}
+
+.advantage__img_2 {
+  background-image: url('../img/official-dealer.svg');
+}
+
+.advantage__img_3 {
+  background-image: url('../img/guarantee.svg');
+}
+
+.advantage__img_4 {
+  background-image: url('../img/service.svg');
+}
+
+.advantage__img_5 {
+  background-image: url('../img/price-quality.svg');
+}
+
+.advantage__img_6 {
+  background-image: url('../img/leasing.svg');
+}
+
+.advantage h3 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.advantage p {
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  color: #5E5E5E;
+}
+
+/* Advantages end */
+
+/* Info start */
+
+.info {
+  background: url('../img/info-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.info__content {
+  padding: 89px 0 119px;
+}
+
+.info__content h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  color: black;
+  margin-bottom: 62px;
+}
+
+.info__blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  width: 384px;
+  padding-top: 173px;
+  background: no-repeat center 0;
+  background-size: contain;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.info-block_01 {
+  background-image: url('../img/01.jpg');
+}
+
+.info-block_02 {
+  background-image: url('../img/02.jpg');
+  position: relative;
+}
+
+.info-block_02 img {
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+.info-block_03 {
+  background-image: url('../img/03.jpg');
+  margin-right: 0;
+}
+
+.info-block_04 {
+  background-image: url('../img/04.jpg');
+  margin-bottom: 0;
+}
+
+.info-block_05 {
+  background-image: url('../img/05.jpg');
+  margin: 0;
+}
+
+.info-block__content {
+  background-color: white;
+  color: black;
+  padding: 25px;
+  font-weight: bold;
+}
+
+.info-block__number {
+  font-size: 54px;
+  line-height: 70px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.info-block__number::after {
+  position: absolute;
+  content: '';
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(175.24deg, #D54C00 14.1%, #D30000 152.61%);
+}
+
+.info-block__title {
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+/* Info end */
+
+/* Quiz start */
+
+.quiz {
+  background: url('../img/quiz-bg.png') no-repeatcenter center;
+  background-size: cover;
+  padding: 99px 0 91px;
+  color: black;
+}
+
+.quiz h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+/* Quiz end */
 
 
 
