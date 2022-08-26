@@ -897,6 +897,180 @@
 
 /* Quiz end */
 
+/* Reviews start */
+
+.reviews {
+  padding: 104px 0 113px;
+  color: #5E5E5E;
+  background: #F5F5F5;
+}
+
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.reviews__header h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  color: black;
+}
+
+.reviews__controls {
+
+}
+
+.reviews__arrows {
+  margin-bottom: 9px;
+  text-align: right;
+}
+
+.reviews__arrows svg:first-child {
+  margin-right: 40px;
+}
+
+.reviews__arrows svg:hover path {
+  fill: #D30000;
+}
+
+.reviews__link {
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration-line: underline;
+  color: #0072DC;
+}
+
+.reviews__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reviews__left {
+  width: 301px;
+  height: 279px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px;
+}
+
+.reviews__left img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.reviews__left .stars {
+  margin-bottom: 12px;
+}
+
+.reviews__left .stars svg {
+  width: 22.7px;
+}
+
+.reviews__center {
+  margin: 0;
+}
+
+.reviews__right {
+  width: 298px;
+  height: 323px;
+  padding-top: 45px;
+  padding-left: 38px;
+}
+
+.reviews__right h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: black;
+  margin-bottom: 17px;
+}
+
+.reviews__right p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.review {
+  height: 369px;
+  background: #F5F5F5;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+}
+
+.review__left {
+  padding: 59px 112px 0 50px;
+  width: 67%;
+  border-right: 2px solid #E9E9E9;
+}
+
+.review__left h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  margin-bottom: 23px;
+}
+
+.review__left h3::before {
+  content: '«';
+}
+
+.review__left h3::after {
+  content: '»';
+}
+
+.review__right {
+  width: 33%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__right img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  margin-bottom: 27px;
+}
+
+.review__stars {
+  margin-bottom: 16px;
+}
+
+.review__stars svg:last-child path {
+  fill: #9D9D9D80;
+}
+
+.reviews__left h3,
+.review__right h3 {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.reviews__left p,
+.review__right p {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+}
+
+
+
+/* Reviews end */
+
 
 
 
