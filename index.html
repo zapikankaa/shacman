@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Shacman</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,7 +320,65 @@
         <div class="wrapper">
           <h2>Ответьте на 6 вопросов для подбора модели самосвала</h2>
           <div class="quiz__content">
-            
+            <div class="quiz-menu">
+              <div class="quiz-menu__item quiz-menu__item_active">Объем</div>
+              <div class="quiz-menu__item">Колесная формула</div>
+              <div class="quiz-menu__item">Тип загрузки</div>
+              <div class="quiz-menu__item">Тип кабины</div>
+              <div class="quiz-menu__item">Рассчет</div>
+              <div class="quiz-menu__item">Контакты</div>
+            </div>
+            <div class="quiz__question">
+              <h3>1. Какой объем кузова самосвала вы рассматриваете?</h3>
+              <div class="quiz__answers">
+                <label class="quiz-answer">
+                  <div class="quiz-radio">
+                    <input class="quiz-radio__true" type="radio" name="question1" value="0" checked>
+                    <div class="quiz-radio__fake">
+                      <img src="./img/check-quiz.svg" alt="">
+                    </div>
+                  </div>
+                  <span>19 м<sup>3</sup></span>
+                </label>
+                <label class="quiz-answer">
+                  <div class="quiz-radio">
+                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
+                    <div class="quiz-radio__fake">
+                      <img src="./img/check-quiz.svg" alt="">
+                    </div>
+                  </div>
+                  <span>26 м<sup>3</sup></span>
+                </label>
+                <label class="quiz-answer">
+                  <div class="quiz-radio">
+                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
+                    <div class="quiz-radio__fake">
+                      <img src="./img/check-quiz.svg" alt="">
+                    </div>
+                  </div>
+                  <span>35 м<sup>3</sup></span>
+                </label>
+                <label class="quiz-answer">
+                  <div class="quiz-radio">
+                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
+                    <div class="quiz-radio__fake">
+                      <img src="./img/check-quiz.svg" alt="">
+                    </div>
+                  </div>
+                  <span>Предложить все варианты</span>
+                </label>
+              </div>
+            </div>
+            <footer class="quiz__footer">
+              <button class="button_back button_back-inactive">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.76927 0.25853L0.25384 5.87585C-0.0846138 6.22056 -0.0846138 6.77944 0.25384 7.12415L5.76927 12.7415C6.10773 13.0862 6.65647 13.0862 6.99493 12.7415C7.33338 12.3968 7.33338 11.8379 6.99493 11.4932L2.95899 7.38268H13V5.61732H2.95899L6.99493 1.50682C7.33338 1.16212 7.33338 0.603237 6.99493 0.25853C6.65647 -0.0861768 6.10773 -0.0861768 5.76927 0.25853Z" fill="#D1D1D1"/>
+                </svg>
+              </button>
+              <button class="button button_primary">
+                Следующий параметр
+              </button>
+            </footer>
           </div>
         </div>
       </section>
