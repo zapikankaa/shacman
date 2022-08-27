@@ -1387,6 +1387,198 @@
 /* Footer end */
 
 
+/*
+ * INNER PAGE 
+ */
+
+/* SEO start */
+
+.seo {
+  background: rgba(221, 231, 233, 0.5);
+  padding-top: 60px;
+  padding-bottom: 79px;
+}
+
+.seo h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: black;
+  margin-bottom: 23px;
+}
+
+.seo p {
+  font-size: 16px;
+  line-height: 21px;
+  color: #5E5E5E;
+}
+
+/* SEO end */
+
+/* Catalog-full start */
+
+.catalog-full {
+  padding-top: 179px;
+  color: black;
+}
+
+.catalog-full__content {
+  padding-top: 31px;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 72px;
+}
+
+.breadcrumbs__item {
+  font-size: 16px;
+  line-height: 19px;
+  padding-right: 15px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.breadcrumbs__item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 100%;
+  background-color: #D9D9D9;
+}
+
+.breadcrumbs__item:last-child {
+  padding-right: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumbs__item:last-child::after {
+  background: linear-gradient(175.24deg, #D54C00 14.1%, #D30000 152.61%);
+}
+
+.catalog-full h1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 38px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.catalog-full__grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 25px;
+}
+
+.catalog-full__sort {
+  text-align: right;
+}
+
+.catalog-full__heading h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.filters {
+  padding-top: 29px;
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 10px;
+}
+
+.catalog-full__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 84px;
+}
+
+.truck {
+  width: 282px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.truck__img {
+  padding: 8px 11px 15px 10px;
+}
+
+.truck__img img {
+  width: 100%;
+}
+
+.truck h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #0072DC;
+  margin-bottom: 19px;
+}
+
+.characteristics {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 21px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+.truck__price {
+  margin-bottom: 12px;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.truck__price span:last-child {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.truck__buttons {
+  padding-left: 18px;
+  padding-right: 17px;
+}
+
+.truck__buttons .button {
+  font-size: 16px;
+  line-height: 21px;
+  height: 40px;
+  width: 117px;
+  font-family: 'PT Sans';
+  text-align: center;
+}
+
+/* Catalog-full end */
+
+
+
+
+
 
 
 
