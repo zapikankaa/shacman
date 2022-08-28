@@ -19,7 +19,7 @@
           <div class="header__content">
             <div class="header__city">
               <p>Ваш город:</p>
-              <div class="select-city select-city_expanded">
+              <div class="select-city">
                 <h3 class="">Москва</h3>
                 <div class="select-city__options">
                   <div class="select-city__option">Москва</div>
@@ -32,16 +32,24 @@
             <div class="header__mobile">
               8 (999) 643-64-31
             </div>
-            <div class="header__logo">
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
               <img src="./img/header-logo.svg" alt="Shacman logo">
-            </div>
+            </picture>
             <div class="header__contacts">
               <p class="header__phone">8 (929) 663-55-89</p>
               <p class="header__email">shacman-mos@yandex.ru</p>
             </div>
-            <button class="header__call-btn button button_primary">
-              <span>Заказать звонок</span>
-            </button>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+              <div class="burger">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+                </svg>
+              </div>
+            </div>            
           </div>
         </div>
       </header>
@@ -80,11 +88,11 @@
       <section class="main">
         <div class="wrapper">
           <div class="main__content">
-              <h1>
-              Грузовая техника<br>SHACMAN<br>от официального дилера 
+            <h1>
+              Грузовая техника <br>SHACMAN <br>от официального дилера 
             </h1>
             <p>
-              Большой ассортимент наличия техники.<br>Эксклюзивные условия покупки в лизинг.<br>Доставка в любой город России.
+              Большой ассортимент наличия техники. <br>Эксклюзивные условия покупки в лизинг. <br>Доставка в любой город России.
             </p>
             <div class="main__buttons">
               <button class=" button button_primary">Подобрать модель самосвала</button>
@@ -265,7 +273,7 @@
       <section class="info">
         <div class="wrapper">
           <div class="info__content">
-            <h2>Техника Shacman — лучшие грузовые автомобиле по разумной цене </h2>
+            <h2>Техника Shacman — лучшие грузовые автомобили по разумной цене </h2>
             <div class="info__blocks">
               <div class="info-block info-block_01">
                 <div class="info-block__content">
