@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./js/main.js"></script>
 </head>
 <body>
   <div class="page">
@@ -19,13 +21,13 @@
           <div class="header__content">
             <div class="header__city">
               <p>Ваш город:</p>
-              <div class="select-city select-city_expanded">
+              <div class="select-city select-city_expanded" onclick="expandCity(this)">
                 <h3 class="">Москва</h3>
                 <div class="select-city__options">
-                  <div class="select-city__option">Москва</div>
-                  <div class="select-city__option">Белогород</div>
-                  <div class="select-city__option">Вологда</div>
-                  <div class="select-city__option">Воронеж</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
                 </div>
               </div>
             </div>
