@@ -197,10 +197,7 @@
 
 .header__call-btn {
   justify-self: end;
-  padding-top: 38px;
-}
-
-.header__call-btn .button {
+  margin-top: 38px;
   font-weight: bold;
   width: 161px;
   height: 40px;
@@ -1837,6 +1834,132 @@
 
 /* Product end */
 
+/* Modification start */
+
+.modification {
+  background: white;
+  color: black;
+  padding-bottom: 155px;
+}
+
+.modification__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modification__left,
+.modification__right {
+  width: 50%;
+}
+
+.modification__left {
+  padding-top: 75px;
+  padding-right: 64px;
+}
+
+.modification__slider img {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: calc(39px + 77px + 113px);
+}
+
+.modification__right {
+  padding-top: 120px;
+}
+
+.modification__name {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.modification__description {
+  margin-bottom: 26px;
+}
+
+.modification__description h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 19px;
+}
+
+.modification__description li {
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 10px;
+}
+
+.modification__description li:last-child {
+  margin-bottom: 0;
+}
+
+.modification__description li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  content: '';
+  width: 19.73px;
+  height: 17.89px;
+  background: url('../img/check-li.svg') no-repeat center center;
+}
+
+.modification .button_primary {
+  width: 205px;
+  height: 48px;
+}
+
+
+.modification__table {
+  width: 100%;
+}
+
+.modification__table h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 39px;
+  margin-bottom: 15px;
+}
+
+.modification__table ul {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.modification__table li h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 61px;
+}
+
+.modification__table li {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 18px;
+  padding-right: 22px;
+  font-size: 18px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.modification__table li:nth-child(2n) {
+  background: #EFF3F4;
+}
+
+.modification__table li:last-child {
+  line-height: 52px;
+}
+
+/* Modification end */
+
 .burger {
   display: none;
   margin-left: 23px;
@@ -1924,7 +2047,7 @@
   }
 
   .header__call-btn {
-    padding-top: 17px;
+    margin-top: 17px;
     display: flex;
     align-items: baseline;
   }
