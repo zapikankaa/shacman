@@ -21,18 +21,23 @@
           <div class="header__content">
             <div class="header__city">
               <p>Ваш город:</p>
-              <div class="select-city">
+              <div class="select-city" onclick="expandCity(this)">
                 <h3 class="">Москва</h3>
                 <div class="select-city__options">
-                  <div class="select-city__option">Москва</div>
-                  <div class="select-city__option">Белогород</div>
-                  <div class="select-city__option">Вологда</div>
-                  <div class="select-city__option">Воронеж</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
                 </div>
               </div>
             </div>
-            <div class="header__mobile">
-              8 (999) 643-64-31
+            <div class="header__mobile select-contacts" onclick="expandContacts(this)">
+              <p>8 (999) 643-64-31</p>
+              <div class="select-contacts__options">
+                <p>8 (999) 643-64-31</p>
+                <p class="header__phone">8 (929) 663-55-89</p>
+                <p class="header__email">shacman-mos@yandex.ru</p>
+              </div>
             </div>
             <picture class="header__logo">
               <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
@@ -154,42 +159,55 @@
 
       <section class="cabines">
         <h2>Выбирайте любую модификацию типа кабины</h2>
-        <div class="cabines__items">
-          <figure class="cabine">
-            <img class="cabine__img" src="./img/cabine1.jpg" alt="">
-            <figcaption>
-              <div class="cabine__title">
-                <h3>SHACMAN F2000</h3>
-                <button class="button button_primary">Подробнее</button>
-              </div>
-              <p class="cabine__description">
-                Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси.<br>Назначение: перевозка сыпучих грузов на средние и дальние расстояния; применение в дорожно-строительном хозяйстве; карьерная техника; спецавтотехника.
-              </p>
-            </figcaption>
-          </figure>
-          <figure class="cabine">
-            <img class="cabine__img" src="./img/cabine2.jpg" alt="">
-            <figcaption>
-              <div class="cabine__title">
-                <h3>SHACMAN F3000</h3>
-                <button class="button button_primary">Подробнее</button>
-              </div>
-              <p class="cabine__description">
-                Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси. Назначение: перевозка несыпучих/сыпучих грузов; перевозка/смешивание бетонной смеси; установка на грузовую платформу специального оборудования.              </p>
-            </figcaption>
-          </figure>
-          <figure class="cabine">
-            <img class="cabine__img" src="./img/cabine3.jpg" alt="">
-            <figcaption>
-              <div class="cabine__title">
-                <h3>SHACMAN X3000</h3>
-                <button class="button button_primary">Подробнее</button>
-              </div>
-              <p class="cabine__description">
-                Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси.<br>Назначение: перевозка сыпучих/несыпучих грузов на различные расстояния; применение в дорожном, сельском хозяйстве.              </p>
-            </figcaption>
-          </figure>
+        <div class="cabines__slider-left">
+          <svg width="12" height="29" viewBox="0 0 12 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60325 13.5243L10.8405 1.428L9.44019 0L0.24707 13.5L1.41689 14.693L1.18642 14.928L10.3795 28.428L11.7798 27L2.60325 13.5243Z" fill="black"/>
+          </svg>
         </div>
+        <div class="cabines__slider-right">
+          <svg width="12" height="29" viewBox="0 0 12 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.17658 13.5243L0.939347 1.428L2.33964 0L11.5328 13.5L10.3629 14.693L10.5934 14.928L1.40029 28.428L0 27L9.17658 13.5243Z" fill="black"/>
+          </svg>
+        </div>
+        <div class="cabines-wrapper">
+          <div class="cabines__items">
+            <figure class="cabine">
+              <img class="cabine__img" src="./img/cabine1.jpg" alt="">
+              <figcaption>
+                <div class="cabine__title">
+                  <h3>SHACMAN F2000</h3>
+                  <button class="button button_primary">Подробнее</button>
+                </div>
+                <p class="cabine__description">
+                  Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси.<br>Назначение: перевозка сыпучих грузов на средние и дальние расстояния; применение в дорожно-строительном хозяйстве; карьерная техника; спецавтотехника.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="cabine">
+              <img class="cabine__img" src="./img/cabine2.jpg" alt="">
+              <figcaption>
+                <div class="cabine__title">
+                  <h3>SHACMAN F3000</h3>
+                  <button class="button button_primary">Подробнее</button>
+                </div>
+                <p class="cabine__description">
+                  Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси. Назначение: перевозка несыпучих/сыпучих грузов; перевозка/смешивание бетонной смеси; установка на грузовую платформу специального оборудования.              </p>
+              </figcaption>
+            </figure>
+            <figure class="cabine">
+              <img class="cabine__img" src="./img/cabine3.jpg" alt="">
+              <figcaption>
+                <div class="cabine__title">
+                  <h3>SHACMAN X3000</h3>
+                  <button class="button button_primary">Подробнее</button>
+                </div>
+                <p class="cabine__description">
+                  Типы грузовых автомобилей: самосвал, седельный тягач, миксер, шасси.<br>Назначение: перевозка сыпучих/несыпучих грузов на различные расстояния; применение в дорожном, сельском хозяйстве.              </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        
       </section>
 
       <section class="callback">
@@ -204,19 +222,17 @@
             </div>
             <div class="callback__right">
               <form class="callback__form form" action="">
-                <fieldset>
-                  <input class="form__input" type="text" placeholder="Введите телефон">
-                  <label class="form__checkbox">
-                    <input class="checkbox-true" type="checkbox" checked>
-                    <div class="checkbox-fake">
-                      <img class="checkbox-check" src="./img/check.svg" alt="">
-                    </div>
-                    <span>Я даю согласие на обработку персональных данных</span>
-                  </label>
-                </fieldset>
+                <input class="form__input" type="text" placeholder="Введите телефон">
                 <button class="form__button button button_primary">
                   Заказать обратный звонок
                 </button>
+                <label class="form__checkbox">
+                  <input class="checkbox-true" type="checkbox" checked>
+                  <div class="checkbox-fake">
+                    <img class="checkbox-check" src="./img/check.svg" alt="">
+                  </div>
+                  <span>Я даю согласие на обработку персональных данных</span>
+                </label>
               </form>
             </div>
           </div>
@@ -232,6 +248,7 @@
             <p>Для компаний, желающих обновить парк автомобилей промышленного класса, на договорной основе организовываем обучение водителей и обслуживающего персонала. Полный комплекс услуг, касающихся эксплуатации авто марки Shacman — только у нас.</p>
           </div>
         </div>
+        <img src="./img/about-img-mob.png" alt="">
       </section>
 
       <section class="advantages">
@@ -299,7 +316,7 @@
               <div class="info-block info-block_04">
                 <div class="info-block__content">
                   <div class="info-block__number">04</div>
-                  <div class="info-block__title">Об официальном диллере</div>
+                  <div class="info-block__title">Об официальном дилере</div>
                 </div>
               </div>
               <div class="info-block info-block_05">
@@ -325,19 +342,17 @@
             </div>
             <div class="callback__right">
               <form class="callback__form form" action="">
-                <fieldset>
-                  <input class="form__input" type="text" placeholder="Введите телефон">
-                  <label class="form__checkbox">
-                    <input class="checkbox-true" type="checkbox" checked>
-                    <div class="checkbox-fake">
-                      <img class="checkbox-check" src="./img/check.svg" alt="">
-                    </div>
-                    <span>Я даю согласие на обработку персональных данных</span>
-                  </label>
-                </fieldset>
+                <input class="form__input" type="text" placeholder="Введите телефон">
                 <button class="form__button button button_primary">
                   Заказать обратный звонок
                 </button>
+                <label class="form__checkbox">
+                  <input class="checkbox-true" type="checkbox" checked>
+                  <div class="checkbox-fake">
+                    <img class="checkbox-check" src="./img/check.svg" alt="">
+                  </div>
+                  <span>Я даю согласие на обработку персональных данных</span>
+                </label>
               </form>
             </div>
           </div>
@@ -349,12 +364,30 @@
           <h2>Ответьте на 6 вопросов для подбора модели самосвала</h2>
           <div class="quiz__content">
             <div class="quiz-menu">
-              <div class="quiz-menu__item quiz-menu__item_active">Объем</div>
-              <div class="quiz-menu__item">Колесная формула</div>
-              <div class="quiz-menu__item">Тип загрузки</div>
-              <div class="quiz-menu__item">Тип кабины</div>
-              <div class="quiz-menu__item">Рассчет</div>
-              <div class="quiz-menu__item">Контакты</div>
+              <div class="quiz-menu__item quiz-menu__item_active">
+                <span class="quiz-menu__text-desc">Объем</span>
+                <span class="quiz-menu__text-mob">1</span>
+              </div>
+              <div class="quiz-menu__item">
+                <span class="quiz-menu__text-desc">Колесная формула</span>
+                <span class="quiz-menu__text-mob">2</span>
+              </div>
+              <div class="quiz-menu__item">
+                <span class="quiz-menu__text-desc">Тип загрузки</span>
+                <span class="quiz-menu__text-mob">3</span>
+              </div>
+              <div class="quiz-menu__item">
+                <span class="quiz-menu__text-desc">Тип кабины</span>
+                <span class="quiz-menu__text-mob">4</span>
+              </div>
+              <div class="quiz-menu__item">
+                <span class="quiz-menu__text-desc">Рассчет</span>
+                <span class="quiz-menu__text-mob">5</span>
+              </div>
+              <div class="quiz-menu__item">
+                <span class="quiz-menu__text-desc">Контакты</span>
+                <span class="quiz-menu__text-mob">6</span>
+              </div>
             </div>
             <div class="quiz__question">
               <h3>1. Какой объем кузова самосвала вы рассматриваете?</h3>
@@ -514,6 +547,9 @@
             </div>
             <div class="tg">
               <img src="./img/tg.svg" alt="">
+            </div>
+            <div class="footer__callback footer__callback_tab">
+              <button class="button button_primary">Заказать звонок</button>
             </div>
           </div>
           <div class="footer__callback">
