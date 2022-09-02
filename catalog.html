@@ -32,18 +32,106 @@
               </div>
             </div>
             <div class="header__mobile">
-              8 (999) 643-64-31
+              <p>8 (999) 643-64-31</p>
             </div>
-            <div class="header__logo">
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
               <img src="./img/header-logo.svg" alt="Shacman logo">
-            </div>
+            </picture>
             <div class="header__contacts">
               <p class="header__phone">8 (929) 663-55-89</p>
               <p class="header__email">shacman-mos@yandex.ru</p>
             </div>
-            <button class="header__call-btn button button_primary">
-              <span>Заказать звонок</span>
-            </button>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+              <div class="burger">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+                </svg>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </header>
+
+      <header class="header-tab">
+        <div class="wrapper">
+          <div class="header__content">
+            <div class="header__city">
+              <p>Ваш город:</p>
+              <div class="select-city" onclick="expandCity(this)">
+                <h3 class="">Москва</h3>
+                <div class="select-city__options">
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
+                </div>
+              </div>
+            </div>
+            <div class="header__contacts" onclick="expandContacts(this)">
+              <p class="header__mobile">8 (999) 643-64-31</p>
+              <div class="header__contacts-options">
+                <p class="header__phone">8 (929) 663-55-89</p>
+                <p class="header__email">shacman-mos@yandex.ru</p>
+              </div>
+            </div>
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
+              <img src="./img/header-logo.svg" alt="Shacman logo">
+            </picture>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+              <div class="burger">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+                </svg>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </header>
+
+      <header class="header-mob">
+        <div class="wrapper">
+          <div class="header__content">
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
+              <img src="./img/header-logo.svg" alt="Shacman logo">
+            </picture>
+            <div class="header__city">
+              <p>Ваш город:</p>
+              <div class="select-city" onclick="expandCity(this)">
+                <h3 class="">Москва</h3>
+                <div class="select-city__options">
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
+                </div>
+              </div>
+            </div>
+            <div class="burger">
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="header__contacts" onclick="expandContacts(this)">
+              <p class="header__mobile">8 (999) 643-64-31</p>
+              <div class="header__contacts-options">
+                <p class="header__phone">8 (929) 663-55-89</p>
+                <p class="header__email">shacman-mos@yandex.ru</p>
+              </div>
+            </div>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+            </div>            
           </div>
         </div>
       </header>
@@ -700,6 +788,115 @@
           <div class="footer__info">
             <p>Работаем по всей России</p>
             <p>Круглосуточно</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">©2022 ООО «ВК-Транзит» —  Официальный дилер Shacman</p>
+          <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+          <a href="#" class="footer__sitemap">Карта сайта</a>
+          <a href="#" class="footer__developer">Разработка сайта Int-Net-Partner</a>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="footer-tab">
+      <div class="whatsapp">
+        <img src="./img/whatsapp-icon.svg" alt="">
+      </div>
+      <div class="to-top">
+          <img src="./img/slider-left.svg" alt="">
+        </div>
+      <div class="wrapper">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <img src="./img/logo.svg" alt="">
+          </div>
+          <div class="footer__contacts" onclick="expandFooterContacts(this)">
+            <p class="footer__mobile">8 (999) 643-64-31</p>
+            <div class="footer__contacts-options">
+              <p class="footer__phone">8 (929) 663-55-89</p>
+              <p class="footer__email">shacman-mos@yandex.ru</p>
+            </div>
+          </div>
+          <div class="footer__social">
+            <div class="vk">
+              <img src="./img/vk.svg" alt="">
+            </div>
+            <div class="tg">
+              <img src="./img/tg.svg" alt="">
+            </div>
+            <div class="footer__callback">
+              <button class="button button_primary">Заказать звонок</button>
+            </div>
+          </div>
+          <div class="footer__menu footer__menu_1">
+            <a href="#">Каталог техники</a>
+            <a href="#">О бренде</a>
+          </div>
+          <div class="footer__menu footer__menu_2">
+            <a href="#">О компании</a>
+            <a href="#">Партнерам</a>
+          </div>
+          <div class="footer__info">
+            <div class="footer__info-wrapper">
+              <p>Работаем по всей России</p>
+              <p>Круглосуточно</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">©2022 ООО «ВК-Транзит» —  Официальный дилер Shacman</p>
+          <div class="footer__empty"></div>
+          <div class="footer__links">
+            <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+            <a href="#" class="footer__sitemap">Карта сайта</a>
+            <a href="#" class="footer__developer">Разработка сайта Int-Net-Partner</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="footer-mob">
+      <div class="whatsapp">
+        <img src="./img/whatsapp-icon.svg" alt="">
+      </div>
+      <div class="to-top">
+          <img src="./img/slider-left.svg" alt="">
+        </div>
+      <div class="wrapper">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <img src="./img/logo-tab.svg" alt="">
+          </div>
+           <div class="footer__info">
+            <div class="footer__info-wrapper">
+              <p>Работаем по всей России</p>
+              <p>Круглосуточно</p>
+            </div>
+          </div>
+          <div class="footer__contacts" onclick="expandFooterContacts(this)">
+            <p class="footer__mobile">8 (999) 643-64-31</p>
+            <div class="footer__contacts-options">
+              <p class="footer__phone">8 (929) 663-55-89</p>
+              <p class="footer__email">shacman-mos@yandex.ru</p>
+            </div>
+          </div>
+          <div class="footer__social">
+            <div class="vk">
+              <img src="./img/vk.svg" alt="">
+            </div>
+            <div class="tg">
+              <img src="./img/tg.svg" alt="">
+            </div>
+          </div>
+          <div class="footer__menu">
+            <a href="#">Каталог техники</a>
+            <a href="#">О бренде</a>
+            <a href="#">О компании</a>
+            <a href="#">Партнерам</a>
+          </div>
+          <div class="footer__callback">
+            <button class="button button_primary">Заказать звонок</button>
           </div>
         </div>
         <div class="footer__bottom">
