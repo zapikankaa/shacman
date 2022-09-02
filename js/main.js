@@ -11,6 +11,9 @@ function selectCity(el) {
 }
 
 function expandContacts(el) {
-  
   el.classList.toggle('header__contacts_expanded')
+}
+
+function expandFooterContacts(el) {
+  el.classList.toggle('footer__contacts_expanded')
 }
