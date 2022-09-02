@@ -31,13 +31,8 @@
                 </div>
               </div>
             </div>
-            <div class="header__mobile select-contacts" onclick="expandContacts(this)">
+            <div class="header__mobile">
               <p>8 (999) 643-64-31</p>
-              <div class="select-contacts__options">
-                <p>8 (999) 643-64-31</p>
-                <p class="header__phone">8 (929) 663-55-89</p>
-                <p class="header__email">shacman-mos@yandex.ru</p>
-              </div>
             </div>
             <picture class="header__logo">
               <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
@@ -60,6 +55,87 @@
           </div>
         </div>
       </header>
+
+      <header class="header-tab">
+        <div class="wrapper">
+          <div class="header__content">
+            <div class="header__city">
+              <p>Ваш город:</p>
+              <div class="select-city" onclick="expandCity(this)">
+                <h3 class="">Москва</h3>
+                <div class="select-city__options">
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
+                </div>
+              </div>
+            </div>
+            <div class="header__contacts" onclick="expandContacts(this)">
+              <p class="header__mobile">8 (999) 643-64-31</p>
+              <div class="header__contacts-options">
+                <p class="header__phone">8 (929) 663-55-89</p>
+                <p class="header__email">shacman-mos@yandex.ru</p>
+              </div>
+            </div>
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
+              <img src="./img/header-logo.svg" alt="Shacman logo">
+            </picture>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+              <div class="burger">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+                </svg>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </header>
+
+      <header class="header-mob">
+        <div class="wrapper">
+          <div class="header__content">
+            <picture class="header__logo">
+              <source media="(max-width: 1023px)" srcset="./img/logo-tab.svg">
+              <img src="./img/header-logo.svg" alt="Shacman logo">
+            </picture>
+            <div class="header__city">
+              <p>Ваш город:</p>
+              <div class="select-city" onclick="expandCity(this)">
+                <h3 class="">Москва</h3>
+                <div class="select-city__options">
+                  <div class="select-city__option" onclick="selectCity(this)">Москва</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Белогород</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Вологда</div>
+                  <div class="select-city__option" onclick="selectCity(this)">Воронеж</div>
+                </div>
+              </div>
+            </div>
+            <div class="burger">
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="header__contacts" onclick="expandContacts(this)">
+              <p class="header__mobile">8 (999) 643-64-31</p>
+              <div class="header__contacts-options">
+                <p class="header__phone">8 (929) 663-55-89</p>
+                <p class="header__email">shacman-mos@yandex.ru</p>
+              </div>
+            </div>
+            <div class="header__call-btn">
+              <button class="button button_primary">
+                <span>Заказать звонок</span>
+              </button>
+            </div>            
+          </div>
+        </div>
+      </header>
+
       <nav class="menu">
         <div class="wrapper">
           <div class="menu__content">
@@ -86,7 +162,6 @@
             </div>
           </div>
         </div>
-        
       </nav>
     </div>
     

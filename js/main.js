@@ -11,8 +11,6 @@ function selectCity(el) {
 }
 
 function expandContacts(el) {
-  if (document.documentElement.clientWidth ) {
-
-  }
-  el.classList.toggle('contacts_expanded')
+  
+  el.classList.toggle('header__contacts_expanded')
 }
