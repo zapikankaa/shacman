@@ -167,6 +167,18 @@
     
     <main>
       <section class="catalog-full">
+        <div class="breadcrumbs-tab">
+          <nav class="breadcrumbs">
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a class="breadcrumbs__item" href="#">Главная</a>
+            <a class="breadcrumbs__item" href="#">Каталог</a>
+            <p class="breadcrumbs__item" href="#">Самосвалы</p>
+          </nav>
+        </div>
         <div class="wrapper">
           <div class="catalog-full__content">
             <nav class="breadcrumbs">
@@ -175,17 +187,21 @@
               <p class="breadcrumbs__item">Самосвалы</p>
             </nav>
             <h1>Самосвалы</h1>
+            <h2 class="filters-title">Фильтр по каталогу:</h2>
             <div class="row">
               <h2>Фильтр по каталогу:</h2>
               <div class="catalog-full__sort">
                 <span>Сортировать по:</span>
-                <select name="" id="">
-                  <option value="">Исходная сортировка</option>
-                  <option value="">Алфавиту (а-я)</option>
-                  <option value="">Алфавиту (я-а)</option>
-                  <option value="">Цене (по возрастанию)</option>
-                  <option value="">Цене (по убыванию)</option>
-                </select>
+                <div class="sort-select" onclick="expandSort(this)">
+                  <div class="sort-select__value">Исходная сортировка</div>
+                  <div class="sort-select__options">
+                    <div class="sort-select__option sort-select__option_active" onclick="selectSort(this)">Исходная сортировка</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Алфавиту (а-я)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Алфавиту (я-а)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Цене (по возрастанию)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Цене (по убыванию)</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="catalog-full__grid">
@@ -206,6 +222,13 @@
                         <img class="checkbox-check" src="./img/check.svg" alt="">
                       </div>
                       <span>Седельный тягач</span>
+                    </label>
+                    <label class="form__checkbox">
+                      <input class="checkbox-true" type="checkbox">
+                      <div class="checkbox-fake">
+                        <img class="checkbox-check" src="./img/check.svg" alt="">
+                      </div>
+                      <span>Шасси</span>
                     </label>
                     <label class="form__checkbox">
                       <input class="checkbox-true" type="checkbox">
@@ -290,7 +313,7 @@
                       </div>
                       <span>WP 12</span>
                     </label>
-                    <label class="form__checkbox" style="margin-bottom: 27px">
+                    <label class="form__checkbox">
                       <input class="checkbox-true" type="checkbox">
                       <div class="checkbox-fake">
                         <img class="checkbox-check" src="./img/check.svg" alt="">
@@ -313,6 +336,21 @@
                   </fieldset>
                 </form>
               </div>
+
+              <div class="catalog-full__sort catalog-full__sort-tab">
+                <span>Сортировать по:</span>
+                <div class="sort-select" onclick="expandSort(this)">
+                  <div class="sort-select__value">Исходная сортировка</div>
+                  <div class="sort-select__options">
+                    <div class="sort-select__option sort-select__option_active" onclick="selectSort(this)">Исходная сортировка</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Алфавиту (а-я)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Алфавиту (я-а)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Цене (по возрастанию)</div>
+                    <div class="sort-select__option" onclick="selectSort(this)">Цене (по убыванию)</div>
+                  </div>
+                </div>
+              </div>
+
               <div class="catalog-full__items">
                 <div class="truck">
                   <div class="truck__img">
@@ -698,6 +736,7 @@
                     <button class="button button_primary">Купить</button>
                   </div>
                 </div>
+                <a class="more">Показать еще</a>
               </div>
             </div>
 
@@ -726,19 +765,17 @@
             </div>
             <div class="callback__right">
               <form class="callback__form form" action="">
-                <fieldset>
-                  <input class="form__input" type="text" placeholder="Введите телефон">
-                  <label class="form__checkbox">
-                    <input class="checkbox-true" type="checkbox" checked>
-                    <div class="checkbox-fake">
-                      <img class="checkbox-check" src="./img/check.svg" alt="">
-                    </div>
-                    <span>Я даю согласие на обработку персональных данных</span>
-                  </label>
-                </fieldset>
+                <input class="form__input" type="text" placeholder="Введите телефон">
                 <button class="form__button button button_primary">
                   Заказать обратный звонок
                 </button>
+                <label class="form__checkbox">
+                  <input class="checkbox-true" type="checkbox" checked>
+                  <div class="checkbox-fake">
+                    <img class="checkbox-check" src="./img/check.svg" alt="">
+                  </div>
+                  <span>Я даю согласие на обработку персональных данных</span>
+                </label>
               </form>
             </div>
           </div>

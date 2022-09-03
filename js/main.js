@@ -6,7 +6,7 @@ function expandCity(el) {
 }
 
 function selectCity(el) {
-  const cityContainer = el.parentNode.previousElementSibling
+  const cityContainer = el.parentElement.previousElementSibling
   cityContainer.innerText = el.innerText
 }
 
@@ -16,4 +16,17 @@ function expandContacts(el) {
 
 function expandFooterContacts(el) {
   el.classList.toggle('footer__contacts_expanded')
+}
+
+function expandSort(el) {
+  el.classList.toggle('sort-select_expanded')
+}
+
+function selectSort(el) {
+  const valueContainer = el.parentElement.previousElementSibling
+  valueContainer.innerText = el.innerText
+  for (elem of el.parentElement.children) {
+    elem.classList.toggle('sort-select__option_active', false)
+  }
+  el.classList.toggle('sort-select__option_active', true)
 }
