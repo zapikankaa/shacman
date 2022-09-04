@@ -8,12 +8,45 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- gorilla start -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Raleway:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- gorilla end -->
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="./js/main.js"></script>
 </head>
 <body>
+      <!-- gorilla start -->
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <div class="modal__close" onclick="hideModal()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.17181 12.0002L0.686523 20.4855L3.51495 23.3139L12.0002 14.8287L20.4855 23.3139L23.314 20.4855L14.8287 12.0002L23.314 3.51495L20.4855 0.686523L12.0002 9.1718L3.51495 0.686523L0.686523 3.51495L9.17181 12.0002Z" fill="black"/>
+          </svg>
+        </div>
+        <h2>Заказать звонок</h2>
+        <p>Мы перезвоним вам в течение 10 минут</p>
+        <form action="" class="modal-form">
+          <label>
+            <span>Имя*</span>
+            <input type="text">
+          </label>
+          <label>
+            <span>Номер телефона*</span>
+            <input type="tel">
+          </label>
+          <label class="form__checkbox">
+            <input class="checkbox-true" type="checkbox" checked>
+            <div class="checkbox-fake">
+              <img class="checkbox-check" src="./img/check-modal.svg" alt="">
+            </div>
+            <span>Согласие на обработку персональных данных</span>
+          </label>
+          <button class="button button_primary">Заказать звонок</button>
+        </form>
+      </div>
+    </div>
+      <!-- gorilla end -->
   <div class="page">
     <div class="fixed">
       <header class="header">
@@ -43,9 +76,11 @@
               <p class="header__email">shacman-mos@yandex.ru</p>
             </div>
             <div class="header__call-btn">
-              <button class="button button_primary">
+              <!-- gorilla start -->
+              <button class="button button_primary" onclick="showModal()">
                 <span>Заказать звонок</span>
               </button>
+              <!-- gorilla end -->
               <div class="burger">
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
@@ -83,14 +118,20 @@
               <img src="./img/header-logo.svg" alt="Shacman logo">
             </picture>
             <div class="header__call-btn">
-              <button class="button button_primary">
+              <!-- gorilla start -->
+              <button class="button button_primary" onclick="showModal()">
                 <span>Заказать звонок</span>
               </button>
-              <div class="burger">
+              <div class="burger" onclick="openMenu(this)">
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
                 </svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.5566 14.1426C10.0338 8.61973 6.93735 5.52329 1.41451 0.000442743L0.000291705 1.41466L14.1424 15.5568L15.5566 14.1426Z" fill="white"/>
+                  <path d="M0 14.1421L14.1421 2.38419e-07L15.5563 1.41421L1.41421 15.5563L0 14.1421Z" fill="white"/>
+                </svg>
               </div>
+              <!-- gorilla end  -->
             </div>            
           </div>
         </div>
@@ -115,11 +156,17 @@
                 </div>
               </div>
             </div>
-            <div class="burger">
+            <!-- gorilla start -->
+            <div class="burger" onclick="openMenuMob(this)">
               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM0 7H20V9H0V7ZM20 14H0V16H20V14Z" fill="white"/>
               </svg>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5566 14.1426C10.0338 8.61973 6.93735 5.52329 1.41451 0.000442743L0.000291705 1.41466L14.1424 15.5568L15.5566 14.1426Z" fill="white"/>
+                <path d="M0 14.1421L14.1421 2.38419e-07L15.5563 1.41421L1.41421 15.5563L0 14.1421Z" fill="white"/>
+              </svg>
             </div>
+            <!-- gorilla end -->
             <div class="header__contacts" onclick="expandContacts(this)">
               <p class="header__mobile">8 (999) 643-64-31</p>
               <div class="header__contacts-options">
@@ -128,7 +175,9 @@
               </div>
             </div>
             <div class="header__call-btn">
-              <button class="button button_primary">
+              <!-- gorilla start -->
+              <button class="button button_primary" onclick="showModal()">
+                <!-- gorilla end -->
                 <span>Заказать звонок</span>
               </button>
             </div>            
@@ -136,17 +185,40 @@
         </div>
       </header>
 
-      <nav class="menu">
+      <!-- gorilla start -->
+      <nav id="main-nav" class="menu">
         <div class="wrapper">
           <div class="menu__content">
-            <button class="menu__catalog button button_primary">
+            <button onclick="expandCatalog(this)" class="menu__catalog button button_primary">
               Каталог
             </button>
+            <div class="menu__catalog-options">
+              <div class="catalog-options__left">
+                <p class="catalog-options__item">Самосвалы</p>
+                <p class="catalog-options__item">Седельные тягачи</p>
+                <p class="catalog-options__item">Миксеры</p>
+                <p class="catalog-options__item">Шасси</p>
+              </div>
+              <div class="catalog-options__right catalog-options__right_shown">
+                <p class="catalog-options__item">F2000</p>
+                <p class="catalog-options__item">F3000</p>
+                <p class="catalog-options__item">X3000</p>
+              </div>
+            </div>
             <div class="menu-items">
               <a class="menu__item" href="#">О бренде</a>
               <a class="menu__item" href="#">О компании</a>
-              <a class="menu__item" href="#">Партнеры</a>
+              <a onclick="expandPartners(this)" class="menu__item">
+                Партнеры
+                <div class="partners-options">
+                  <p class="partners-options__item">Сервис и обслуживание</p>
+                  <p class="partners-options__item">Лизинг</p>
+                  <p class="partners-options__item">Оплата</p>
+                  <p class="partners-options__item">Гарантия</p>
+                </div>
+              </a>      
             </div>
+            <!-- gorilla end -->
 
             <div class="menu__search">
               <input class="search" type="text" placeholder="Поиск по сайту" >
@@ -164,7 +236,66 @@
         </div>
         
       </nav>
+
+      <!-- gorilla start -->
+      <nav id="main-nav-mob" class="menu menu-mob">
+        <div class="menu__content">
+          <div class="menu-mob__item">
+            <a class="menu-mob__item-title" onclick="expandCatalogMob(this)">Каталог</a>
+            <div class="catalog-categories">
+              <div class="catalog-category">
+                <p class="catalog-category__title" onclick="expandCategoryMob(this)">Самосвалы</p>
+                <div class="catalog-items">
+                  <a href="" class="catalog-item">F2000</a>
+                  <a href="" class="catalog-item">F3000</a>
+                  <a href="" class="catalog-item">X3000</a>
+                </div>
+              </div>
+              <div class="catalog-category">
+                <p class="catalog-category__title" onclick="expandCategoryMob(this)">Седельные тягачи</p>
+                <div class="catalog-items">
+                  <a href="" class="catalog-item">F2000</a>
+                  <a href="" class="catalog-item">F3000</a>
+                  <a href="" class="catalog-item">X3000</a>
+                </div>
+              </div>
+              <div class="catalog-category">
+                <p class="catalog-category__title" onclick="expandCategoryMob(this)">Миксеры</p>
+                <div class="catalog-items">
+                  <a href="" class="catalog-item">F2000</a>
+                  <a href="" class="catalog-item">F3000</a>
+                  <a href="" class="catalog-item">X3000</a>
+                </div>
+              </div>
+              <div class="catalog-category">
+                <p class="catalog-category__title" onclick="expandCategoryMob(this)">Шасси</p>
+                <div class="catalog-items">
+                  <a href="" class="catalog-item">F2000</a>
+                  <a href="" class="catalog-item">F3000</a>
+                  <a href="" class="catalog-item">X3000</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-mob__item">
+            <a href="" class="menu-mob__item-title">О бренде</a>
+          </div>
+          <div class="menu-mob__item">
+            <a href="" class="menu-mob__item-title">О компании</a>
+          </div>
+          <div class="menu-mob__item">
+            <a class="menu-mob__item-title" onclick="expandPartnersMob(this)">Партнеры</a>
+            <div class="partners-mob">
+              <a href="" class="partners-mob__item">Сервис и обслуживание</a>
+              <a href="" class="partners-mob__item">Лизинг</a>
+              <a href="" class="partners-mob__item">Оплата</a>
+              <a href="" class="partners-mob__item">Гарантия</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
+    <!-- gorilla end -->
     
     <main>
       <section class="product">
@@ -351,7 +482,9 @@
             </div>
           </div>
           <div class="footer__callback">
-            <button class="button button_primary">Заказать звонок</button>
+            <!-- gorilla start -->
+            <button class="button button_primary" onclick="showModal()">Заказать звонок</button>
+            <!-- gorilla end -->
           </div>
           <div class="footer__menu">
             <a href="#">Каталог техники</a>
@@ -403,7 +536,9 @@
               <img src="./img/tg.svg" alt="">
             </div>
             <div class="footer__callback">
-              <button class="button button_primary">Заказать звонок</button>
+              <!-- gorilla start -->
+              <button class="button button_primary" onclick="showModal()">Заказать звонок</button>
+              <!-- gorilla end -->
             </div>
           </div>
           <div class="footer__menu footer__menu_1">
@@ -473,8 +608,10 @@
             <a href="#">Партнерам</a>
           </div>
           <div class="footer__callback">
-            <button class="button button_primary">Заказать звонок</button>
-          </div>
+            <!-- gorilla start -->
+            <button class="button button_primary" onclick="showModal()">Заказать звонок</button>
+            <!-- gorilla end -->
+           </div>
         </div>
         <div class="footer__bottom">
           <p class="footer__copyright">©2022 ООО «ВК-Транзит» —  Официальный дилер Shacman</p>

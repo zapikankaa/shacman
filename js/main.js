@@ -30,3 +30,45 @@ function selectSort(el) {
   }
   el.classList.toggle('sort-select__option_active', true)
 }
+
+function openMenu(el) {
+  el.classList.toggle('burger_close')
+
+  const menu = document.getElementById('main-nav')
+  menu.classList.toggle('menu_shown')
+}
+
+function openMenuMob(el) {
+  el.classList.toggle('burger_close')
+
+  const menu = document.getElementById('main-nav-mob')
+  menu.classList.toggle('menu_shown')
+}
+
+function expandCatalog(el) {
+  el.classList.toggle('menu__catalog_expanded')
+}
+
+function expandPartners(el) {
+  el.classList.toggle('partners_shown')
+}
+
+function expandCatalogMob(el) {
+  el.classList.toggle('menu-mob__item-title_expanded')
+}
+
+function expandCategoryMob(el) {
+  el.classList.toggle('catalog-category__title_expanded')
+}
+
+function expandPartnersMob(el) {
+  el.classList.toggle('menu-mob__item-title_expanded')
+}
+
+function showModal() {
+  document.getElementById('modal').classList.toggle('modal_shown', true)
+}
+
+function hideModal() {
+  document.getElementById('modal').classList.toggle('modal_shown', false)
+}
