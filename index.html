@@ -16,7 +16,7 @@
 <body>
     <div class="modal" id="modal">
       <div class="modal__content">
-        <div class="modal__close" onclick="hideModal()">
+        <div class="modal__close" onclick="hideModal('modal')">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.17181 12.0002L0.686523 20.4855L3.51495 23.3139L12.0002 14.8287L20.4855 23.3139L23.314 20.4855L14.8287 12.0002L23.314 3.51495L20.4855 0.686523L12.0002 9.1718L3.51495 0.686523L0.686523 3.51495L9.17181 12.0002Z" fill="black"/>
           </svg>
@@ -43,6 +43,19 @@
         </form>
       </div>
     </div>
+
+    <div class="modal modal_success" id="modal-success">
+      <div class="modal__content">
+        <div class="modal__close" onclick="hideModal('modal-success')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.17181 12.0002L0.686523 20.4855L3.51495 23.3139L12.0002 14.8287L20.4855 23.3139L23.314 20.4855L14.8287 12.0002L23.314 3.51495L20.4855 0.686523L12.0002 9.1718L3.51495 0.686523L0.686523 3.51495L9.17181 12.0002Z" fill="black"/>
+          </svg>
+        </div>
+        <h2>Ваша заявка успешно отправлена</h2>
+        <p>Мы перезвоним вам в течение 10 минут и подберем технику по указанным параметрам</p>
+      </div>
+    </div>
+
   <div class="page">
     <div class="fixed">
       <header class="header">
@@ -546,7 +559,7 @@
         <div class="wrapper">
           <h2>Ответьте на 6 вопросов для подбора модели самосвала</h2>
           <div class="quiz__content">
-            <div class="quiz-menu">
+            <div id="quiz-menu" class="quiz-menu">
               <div class="quiz-menu__item quiz-menu__item_active">
                 <span class="quiz-menu__text-desc">Объем</span>
                 <span class="quiz-menu__text-mob">1</span>
@@ -572,54 +585,17 @@
                 <span class="quiz-menu__text-mob">6</span>
               </div>
             </div>
-            <div class="quiz__question">
-              <h3>1. Какой объем кузова самосвала вы рассматриваете?</h3>
-              <div class="quiz__answers">
-                <label class="quiz-answer">
-                  <div class="quiz-radio">
-                    <input class="quiz-radio__true" type="radio" name="question1" value="0" checked>
-                    <div class="quiz-radio__fake">
-                      <img src="./img/check-quiz.svg" alt="">
-                    </div>
-                  </div>
-                  <span>19 м<sup>3</sup></span>
-                </label>
-                <label class="quiz-answer">
-                  <div class="quiz-radio">
-                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
-                    <div class="quiz-radio__fake">
-                      <img src="./img/check-quiz.svg" alt="">
-                    </div>
-                  </div>
-                  <span>26 м<sup>3</sup></span>
-                </label>
-                <label class="quiz-answer">
-                  <div class="quiz-radio">
-                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
-                    <div class="quiz-radio__fake">
-                      <img src="./img/check-quiz.svg" alt="">
-                    </div>
-                  </div>
-                  <span>35 м<sup>3</sup></span>
-                </label>
-                <label class="quiz-answer">
-                  <div class="quiz-radio">
-                    <input class="quiz-radio__true" type="radio" name="question1" value="0">
-                    <div class="quiz-radio__fake">
-                      <img src="./img/check-quiz.svg" alt="">
-                    </div>
-                  </div>
-                  <span>Предложить все варианты</span>
-                </label>
-              </div>
+            <div id="quizQuestion" class="quiz__question">
+              <h3></h3>
+              <div class="quiz__answers"></div>
             </div>
-            <footer class="quiz__footer">
-              <button class="button_back button_back-inactive">
+            <footer id="quizFooter" class="quiz__footer">
+              <button class="button_back button_back-inactive" onclick="prevQuestion()">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M5.76927 0.25853L0.25384 5.87585C-0.0846138 6.22056 -0.0846138 6.77944 0.25384 7.12415L5.76927 12.7415C6.10773 13.0862 6.65647 13.0862 6.99493 12.7415C7.33338 12.3968 7.33338 11.8379 6.99493 11.4932L2.95899 7.38268H13V5.61732H2.95899L6.99493 1.50682C7.33338 1.16212 7.33338 0.603237 6.99493 0.25853C6.65647 -0.0861768 6.10773 -0.0861768 5.76927 0.25853Z" fill="#D1D1D1"/>
                 </svg>
               </button>
-              <button class="button button_primary">
+              <button id="quiz-next-button" class="button button_primary button_inactive">
                 Следующий параметр
               </button>
             </footer>
@@ -643,29 +619,6 @@
           </div>
         </header>
         <div class="reviews__content">
-          <div class="reviews__left">
-            <img src="./img/userpic2.jpg" alt="">
-            <div class="stars">
-              <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.999 0L18.3667 10.3647H29.2649L20.4481 16.7705L23.8158 27.1353L14.999 20.7295L6.18224 27.1353L9.54995 16.7705L0.733175 10.3647H11.6313L14.999 0Z" fill="#FFB800"/>
-              </svg>
-              <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.999 0L18.3667 10.3647H29.2649L20.4481 16.7705L23.8158 27.1353L14.999 20.7295L6.18224 27.1353L9.54995 16.7705L0.733175 10.3647H11.6313L14.999 0Z" fill="#FFB800"/>
-              </svg>
-              <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.999 0L18.3667 10.3647H29.2649L20.4481 16.7705L23.8158 27.1353L14.999 20.7295L6.18224 27.1353L9.54995 16.7705L0.733175 10.3647H11.6313L14.999 0Z" fill="#FFB800"/>
-              </svg>
-              <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.999 0L18.3667 10.3647H29.2649L20.4481 16.7705L23.8158 27.1353L14.999 20.7295L6.18224 27.1353L9.54995 16.7705L0.733175 10.3647H11.6313L14.999 0Z" fill="#FFB800"/>
-              </svg>
-              <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.999 0L18.3667 10.3647H29.2649L20.4481 16.7705L23.8158 27.1353L14.999 20.7295L6.18224 27.1353L9.54995 16.7705L0.733175 10.3647H11.6313L14.999 0Z" fill="#FFB800"/>
-              </svg>
-            </div>
-            <h3>Виктор Казанцев</h3>
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-
           <div class="reviews__center wrapper">
             <div class="review">
               <div class="review__left">
@@ -695,11 +648,6 @@
                 <p>Lorem ipsum dolor sit amet</p>
               </div>
             </div>
-          </div>
-
-          <div class="reviews__right">
-            <h3>Был приятно поражен, тем, что ребята приехали так быстро!</h3>
-            <p>Приехав весной на дачу, был неприятно удивлен. Впервые за много лет подвал затопило, да так, что вода плескалась почти вровень с полом. Ждать пока это «озеро» само уйдет не очень хотелось.</p>
           </div>
         </div>
       </section>
